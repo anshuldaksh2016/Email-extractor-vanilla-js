@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Extractor </title>
+</head>
+
+<body>
+    <h2>Paste Text : <br></h2>
+    <textarea name="txtarea" id="" cols="30" rows="10"></textarea>
+
+    <button class="btn">Get Emails </button>
+    <br>
+    <h2>Emails in text : <br></h2>
+
+    <textarea name=output"" id="" cols="30" rows="10"></textarea>
+
+
+
+
+    <script>
+
+        const rawtext = document.querySelector("textarea[name=txtarea]");
+        const finalTxt = document.querySelector("textarea[name=output]");
+        const btn = document.querySelector(".btn");
+
+        btn.addEventListener("click", function () {
+            console.log("Clicked");
+        })
+
+    </script>
+
+
+
+</body>
+
+</html>
