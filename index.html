@@ -40,16 +40,15 @@
                     // -1 means not in the array already
                 }
             }
-            let tempholder = holder.join("--new--");
+            let tempholder = holder.join(";");
             counter.innerText = holder.length;
-            finalTxt.innerText = holder;
-
-
-
-
+            finalTxt.innerText = tempholder;
 
         })
 
+        finalTxt.addEventListener("click", function () {
+            this.select();
+        })
     </script>
 
 
