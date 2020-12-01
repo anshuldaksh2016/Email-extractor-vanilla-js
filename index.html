@@ -32,9 +32,20 @@
             let temp = rawtext.value;
             let exp = /([A-Za-z._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi;
             let emailData = temp.match(exp);
-            console.log(emailData);
-            finalTxt.innerText = emailData;
-            counter.innerText = emailData.length;
+            let holder = [];
+            // check for the duplicates
+            for (let x = 0; x < emailData.length; x++) {
+                if (holder.indexOf(emailData[x]) == -1) {
+                    holder.push(emailData[x]);
+                    // -1 means not in the array already
+                }
+            }
+            let tempholder = holder.join("--new--");
+            counter.innerText = holder.length;
+            finalTxt.innerText = holder;
+
+
+
 
 
         })
