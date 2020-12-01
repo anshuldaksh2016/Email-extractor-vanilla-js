@@ -10,7 +10,8 @@
 <body>
     <h2>Paste Text : <br></h2>
     <textarea name="txtarea" id="" cols="30" rows="10">
-
+        dfmslkfms.df real.text@yahhoo.com ravi@gmail.com  dfsmdfkmdkfm
+        k,d,fxdf 
     </textarea>
 
     <button class="btn">Get Emails </button>
@@ -19,17 +20,21 @@
 
     <textarea name=output"" id="" cols="30" rows="10"></textarea>
 
-
-
-
     <script>
 
         const rawtext = document.querySelector("textarea[name=txtarea]");
         const finalTxt = document.querySelector("textarea[name=output]");
         const btn = document.querySelector(".btn");
 
+
         btn.addEventListener("click", function () {
-            console.log("Clicked");
+            let temp = rawtext.value;
+            let exp = /([A-Za-z._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi;
+
+            let emailData = temp.match(exp);
+            console.log(emailData);
+
+
         })
 
     </script>
