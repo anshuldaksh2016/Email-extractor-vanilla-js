@@ -16,23 +16,25 @@
 
     <button class="btn">Get Emails </button>
     <br>
-    <h2>Emails in text : <br></h2>
+    <h2> <span class="counter"></span> Emails in text : <br></h2>
 
-    <textarea name=output"" id="" cols="30" rows="10"></textarea>
+    <textarea name="output" id="" cols="30" rows="10"></textarea>
 
     <script>
 
         const rawtext = document.querySelector("textarea[name=txtarea]");
         const finalTxt = document.querySelector("textarea[name=output]");
         const btn = document.querySelector(".btn");
+        const counter = document.querySelector(".counter")
 
 
         btn.addEventListener("click", function () {
             let temp = rawtext.value;
             let exp = /([A-Za-z._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi;
-
             let emailData = temp.match(exp);
             console.log(emailData);
+            finalTxt.innerText = emailData;
+            counter.innerText = emailData.length;
 
 
         })
